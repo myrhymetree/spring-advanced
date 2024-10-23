@@ -6,14 +6,14 @@ public class TraceId {
     private String id;
     private int level;
 
-    private TraceId(String id, int level) {
-        this.id = id;
-        this.level = level;
-    }
-
     public TraceId() {
         this.id = createdId();
         this.level = 0;
+    }
+
+    private TraceId(String id, int level) {
+        this.id = id;
+        this.level = level;
     }
 
     private String createdId() {
